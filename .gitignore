@@ -1,0 +1,10 @@
+db.sqlite3
+media/
+private_files/
+staticfiles/
+venv/
+__pycache__/
+.env
+*.pyc
+.qodo/
+private_tmp/
