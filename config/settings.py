@@ -17,11 +17,8 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or ("dev-only-insecure-key-" + 
 if PROD and not os.environ.get("DJANGO_SECRET_KEY"):
     raise RuntimeError("Set DJANGO_SECRET_KEY on the server")
 
-ALLOWED_HOSTS = [
-    h.strip()
-    for h in os.environ.get("DJANGO_HOSTS", "127.0.0.1,localhost").split(",")
-    if h.strip()
-]
+ALLOWED_HOSTS = ['*']
+
 
 # ---------------------------------------------------------------
 # Admin / login URLs
